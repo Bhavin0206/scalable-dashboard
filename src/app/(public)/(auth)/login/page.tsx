@@ -59,7 +59,9 @@ const Login = () => {
 
                             {/* Email */}
                             <div>
-                                <Label>Email *</Label>
+                                <Label>
+                                    Email <span className="text-red-500">*</span>
+                                </Label>
                                 <Input
                                     type="email"
                                     placeholder="info@gmail.com"
@@ -71,7 +73,7 @@ const Login = () => {
 
                             {/*  Password */}
                             <div>
-                                <Label>Password *</Label>
+                                <Label>Password <span className="text-red-500">*</span></Label>
                                 <div className="relative">
                                     <Input
                                         type={showPassword ? "text" : "password"}
@@ -92,7 +94,7 @@ const Login = () => {
                             {/*  Remember */}
                             <div className="flex items-center justify-between">
                                 <div className="flex items-center gap-3">
-                                    <Checkbox checked={isChecked} onChange={setIsChecked} />
+                                    {/* <Checkbox checked={isChecked} onChange={setIsChecked} /> */}
                                     <span className="text-sm text-gray-600">
                                         Keep me logged in
                                     </span>

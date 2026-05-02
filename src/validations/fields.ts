@@ -10,5 +10,23 @@ export const fields = {
 
     password: z
         .string()
-        .min(1, "Password is required")
+        .min(1, "Password is required"),
+
+    firstName: z
+        .string()
+        .min(1, "First name is required")
+        .max(50),
+
+    lastName: z
+        .string()
+        .min(1, "Last name is required")
+        .max(50),
+
+    confirmPassword: z.string(),
+
+    terms: z
+        .boolean()
+        .refine((val) => val === true, {
+            message: "You must accept terms",
+        }),
 };
