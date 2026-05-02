@@ -13,12 +13,15 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchemas } from "@/validations/schema";
 import { z } from "zod";
 
+import { useRouter } from "next/navigation";
+
 
 type LoginFormData = z.infer<typeof loginSchemas.login>;
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
+    const router = useRouter();
 
 
     const {
@@ -34,6 +37,8 @@ const Login = () => {
         console.log("Login Data:", data);
 
         await new Promise((resolve) => setTimeout(resolve, 2000)); // simulate API
+
+        router.push("/admin");
     };
 
     return (
@@ -107,7 +112,7 @@ const Login = () => {
 
                     <div className="mt-5 text-sm text-center">
                         Don’t have an account?{" "}
-                        <Link href="/signup" className="text-blue-500">
+                        <Link href="/register" className="text-blue-500">
                             Sign Up
                         </Link>
                     </div>
