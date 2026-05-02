@@ -38,7 +38,7 @@ export default function Register() {
             <div className="flex flex-col justify-center flex-1 w-full max-w-md mx-auto">
 
                 <div className="mb-6">
-                    <h1 className="text-xl font-semibold">Sign Up</h1>
+                    <h1 className="mb-2 font-semibold text-gray-800 text-title-sm dark:text-white/90 sm:text-title-md">Sign Up</h1>
                     <p className="text-sm text-gray-500">
                         Enter your email and password to sign up!
                     </p>
@@ -103,7 +103,7 @@ export default function Register() {
                                 />
                                 <span
                                     onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-4 top-3 cursor-pointer"
+                                    className="absolute right-4 top-3 cursor-pointer dark:text-gray-400"
                                 >
                                     {showPassword ? <EyeIcon /> : <EyeCloseIcon />}
                                 </span>
@@ -127,7 +127,7 @@ export default function Register() {
 
                                 <span
                                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                                    className="absolute right-4 top-3 cursor-pointer"
+                                    className="absolute right-4 top-3 cursor-pointer dark:text-gray-400"
                                 >
                                     {showConfirmPassword ? <EyeIcon /> : <EyeCloseIcon />}
                                 </span>
@@ -137,7 +137,7 @@ export default function Register() {
                         {/* Terms */}
                         <div className="flex items-center gap-3">
                             <Checkbox {...register("terms")} />
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm dark:text-gray-400">
                                 I agree to Terms & Privacy Policy
                             </p>
                         </div>
@@ -159,7 +159,7 @@ export default function Register() {
                     </div>
                 </form>
 
-                <div className="mt-5 text-sm text-center">
+                <div className="mt-5 text-sm text-center dark:text-gray-400">
                     Already have an account?{" "}
                     <Link href="/login" className="text-blue-500">
                         Sign In
